@@ -1,0 +1,35 @@
+\hypertarget{colorscalewidget_8h_source}{}\doxysection{colorscalewidget.\+h}
+\label{colorscalewidget_8h_source}\index{D:/uw/research/drcr/src/core/colorscalewidget.h@{D:/uw/research/drcr/src/core/colorscalewidget.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef COLORSCALEWIDGET\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define COLORSCALEWIDGET\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QPainter>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QPaintEvent>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QOpenGLFunctions>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_color_scale_widget}{ColorScaleWidget}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13       Q\_OBJECT}
+\DoxyCodeLine{14    \textcolor{keyword}{public}:}
+\DoxyCodeLine{15       \textcolor{keyword}{explicit} \mbox{\hyperlink{class_color_scale_widget}{ColorScaleWidget}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17    \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{18       \textcolor{keywordtype}{void} getColorMap(QVector<GLfloat> cmap);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20    signals:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22    \textcolor{keyword}{protected}:}
+\DoxyCodeLine{23       \textcolor{keywordtype}{void} paintEvent(QPaintEvent *event);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25    \textcolor{keyword}{private}:}
+\DoxyCodeLine{26       QPainter p;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// COLORSCALEWIDGET\_H}}
+
+\end{DoxyCode}

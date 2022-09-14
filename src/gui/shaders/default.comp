@@ -1,0 +1,71 @@
+#version 450 core
+
+#define NUM_ADJACENT 3
+#define NUM_WATCHES  8  // match to datatypes.h
+#define MS_IN_DAY 86400000.0
+
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 8) in;
+
+layout(location = 1) uniform int time;
+
+layout(std430, binding = 0) buffer PARAM0 {
+   float val[]; } param0;
+
+layout(std430, binding = 1) buffer PARAM1 {
+   float val[]; } param1;
+
+layout(std430, binding = 2) buffer PARAM2 {
+   float val[]; } param2;
+
+layout(std430, binding = 3) buffer PARAM3 {
+   float val[]; } param3;
+
+layout(std430, binding = 4) buffer PARAM4 {
+   float val[]; } param4;
+
+layout(std430, binding = 5) buffer PARAM5 {
+   float val[]; } param5;
+
+layout(std430, binding = 6) buffer ADJ {
+   int id[][NUM_ADJACENT]; } adj;
+
+struct ShaderWatch {
+   int   ints   [NUM_WATCHES];
+   float floats [NUM_WATCHES];
+   vec4  vec4s  [NUM_WATCHES];
+};
+
+layout(std430, binding = 7) buffer DEBUG {
+   ShaderWatch watch; } debug;
+
+
+float rand(float n){return fract(sin(n) * 43758.5453123);}
+
+// void traverseMesh(int seed) {
+//    int steps = 0;
+//    float color = 0.0;
+//    float inc = 1.0 / param0.val.length();
+//
+//    while ( steps < param0.val.length() ) {
+//       for (adj_id = 0; adj_id < 3; ++adj_id) {
+//          param1.val[seed] = color;
+//       }
+//    }
+// }
+
+void main()
+{
+  float count = 0.0;
+  const float interval = 1.0/param0.val.length();
+    for (int i = 0; i < param0.val.length(); ++i) {
+      param0.val[i] = rand(time/MS_IN_DAY + count);
+      count += interval;
+    }
+
+    for (int i = 0; i < param2.val.length(); ++i) {
+      param2.val[i] = rand(time/MS_IN_DAY + count);
+      count += interval;
+    }
+}
+
+

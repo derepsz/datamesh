@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>shaders/default.frag</file>
+        <file>shaders/default.vert</file>
+        <file>shaders/fbselect.frag</file>
+        <file>shaders/fbselect.vert</file>
+        <file>shaders/fbhighlight.vert</file>
+        <file>shaders/fbhighlight.frag</file>
+        <file>shaders/default.comp</file>
+        <file>common/main.css</file>
+        <file>readme/img/gui_nums.png</file>
+        <file>readme/shadercookbook.txt</file>
+        <file>readme/readme.txt</file>
+    </qresource>
+</RCC>

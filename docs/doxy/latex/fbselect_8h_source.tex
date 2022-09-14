@@ -1,0 +1,50 @@
+\hypertarget{fbselect_8h_source}{}\doxysection{fbselect.\+h}
+\label{fbselect_8h_source}\index{D:/uw/research/drcr/src/core/fbselect.h@{D:/uw/research/drcr/src/core/fbselect.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FBSELECT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FBSELECT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QOpenGLFunctions>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QPoint>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QOpenGLShaderProgram>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QPointer>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}mesh.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_fb_select}{FbSelect}} : \textcolor{keyword}{public} QObject, \textcolor{keyword}{protected} QOpenGLFunctions}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14       Q\_OBJECT}
+\DoxyCodeLine{15    \textcolor{keyword}{public}:}
+\DoxyCodeLine{16       \mbox{\hyperlink{class_fb_select}{FbSelect}}();}
+\DoxyCodeLine{17       \mbox{\hyperlink{class_fb_select}{FbSelect}}(qreal w, qreal h, qreal PixelRatio);}
+\DoxyCodeLine{18       \mbox{\hyperlink{class_fb_select}{\string~FbSelect}}();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20       \textcolor{keywordtype}{void} init(qreal w, qreal h, qreal pixelRatio);}
+\DoxyCodeLine{21       \textcolor{keywordtype}{void} onMousePress(QPoint clickCoord);}
+\DoxyCodeLine{22       \textcolor{keywordtype}{void} onMouseRelease(QPoint clickCoord);}
+\DoxyCodeLine{23       \textcolor{keywordtype}{void} readSelection(\mbox{\hyperlink{class_mesh}{Mesh}}\&, QOpenGLShaderProgram\&, \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25       QVector<uint> selected;}
+\DoxyCodeLine{26 \textcolor{comment}{//      void initSelectShader();}}
+\DoxyCodeLine{27 \textcolor{comment}{//      void bind();}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31    \textcolor{keyword}{private}:}
+\DoxyCodeLine{32       GLuint                     m\_fbo;}
+\DoxyCodeLine{33       GLuint                     m\_rbo;}
+\DoxyCodeLine{34       GLuint                     m\_idtex;}
+\DoxyCodeLine{35       GLuint                     m\_dptex;}
+\DoxyCodeLine{36       QOpenGLShaderProgram       m\_selectShader;}
+\DoxyCodeLine{37       QPoint                     m\_clickCoord;}
+\DoxyCodeLine{38       \textcolor{keywordtype}{float}                      m\_glview\_x;}
+\DoxyCodeLine{39       \textcolor{keywordtype}{float}                      m\_glview\_y;}
+\DoxyCodeLine{40       \textcolor{keywordtype}{int} m\_viewHeight;}
+\DoxyCodeLine{41       qreal m\_pixelRatio;}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FBSELECT\_H}}
+
+\end{DoxyCode}

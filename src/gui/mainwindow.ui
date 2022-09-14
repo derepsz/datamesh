@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>DataMesh GUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="handleWidth">
+       <number>6</number>
+      </property>
+      <widget class="QFrame" name="upperFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QSplitter" name="splitter_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QFrame" name="leftSidebar">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QToolBox" name="toolBox_2">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="Parameters">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>168</width>
+                 <height>586</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string/>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QLabel" name="labelFg">
+                  <property name="text">
+                   <string>Facet Groups</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="listWidget">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>0</number>
+                  </property>
+                  <property name="midLineWidth">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="addNewFg">
+                  <property name="text">
+                   <string>Add New</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="updateParameters">
+                  <property name="text">
+                   <string>Send Data</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM0">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                     <item>
+                      <widget class="QRadioButton" name="p0toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p0name">
+                       <property name="text">
+                        <string>PARAM0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p0val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <item>
+                      <widget class="QRadioButton" name="p1toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p1name">
+                       <property name="text">
+                        <string>PARAM1</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p1val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_6">
+                     <item>
+                      <widget class="QRadioButton" name="p2toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p2name">
+                       <property name="text">
+                        <string>PARAM2</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p2val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <item>
+                      <widget class="QRadioButton" name="p3toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p3name">
+                       <property name="text">
+                        <string>PARAM3</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p3val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_11">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <widget class="QRadioButton" name="p4toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p4name">
+                       <property name="text">
+                        <string>PARAM4</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p4val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="PARAM5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_12">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_9">
+                     <item>
+                      <widget class="QRadioButton" name="p5toggle"/>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="p5name">
+                       <property name="text">
+                        <string>PARAM5</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="p5val">
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QSplitter" name="splitter">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>6</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="handleWidth">
+            <number>6</number>
+           </property>
+           <widget class="GLView" name="openGLWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>5</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>CrossCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::ActionsContextMenu</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QToolBox" name="toolBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <property name="tabSpacing">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="vertShader">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>360</width>
+               <height>564</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Vertex</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QPlainTextEdit" name="vertTextEdit">
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="plainText">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="updateVertButton">
+                <property name="text">
+                 <string>Update Vertex Shader</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="fragShader">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>360</width>
+               <height>564</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Fragment</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QPlainTextEdit" name="fragTextEdit">
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="plainText">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="updateFragButton">
+                <property name="text">
+                 <string>Update Fragment Shader</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="compShader">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>360</width>
+               <height>564</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Compute</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <item>
+               <widget class="QPlainTextEdit" name="compTextEdit">
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="updateCompButton">
+                <property name="text">
+                 <string>Update Compute Shader</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="lowerFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>2</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="shaderDebug">
+           <attribute name="title">
+            <string>Debug Output</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPlainTextEdit" name="debugTextEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1250</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="newSession"/>
+    <addaction name="separator"/>
+    <addaction name="loadSession"/>
+    <addaction name="saveSession"/>
+    <addaction name="separator"/>
+    <addaction name="loadVertShader"/>
+    <addaction name="loadFragShader"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="readMe"/>
+    <addaction name="displayBindingsHelp"/>
+    <addaction name="shaderCookbook"/>
+    <addaction name="displayAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="buildConnectivity"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuData"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="dispatchCompute"/>
+   <addaction name="shaderWatch"/>
+   <addaction name="GetGlError"/>
+   <addaction name="clearDebug"/>
+  </widget>
+  <action name="newSession">
+   <property name="text">
+    <string>New Session</string>
+   </property>
+   <property name="toolTip">
+    <string>New Session</string>
+   </property>
+  </action>
+  <action name="saveSelection">
+   <property name="text">
+    <string>Save Selection</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Selection</string>
+   </property>
+  </action>
+  <action name="loadSelection">
+   <property name="text">
+    <string>Load Selection</string>
+   </property>
+  </action>
+  <action name="displayBindingsHelp">
+   <property name="text">
+    <string>Mouse / Keyboard Bindings</string>
+   </property>
+  </action>
+  <action name="displayAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="loadFragShader">
+   <property name="text">
+    <string>Load Fragment Shader</string>
+   </property>
+  </action>
+  <action name="loadVertShader">
+   <property name="text">
+    <string>Load Vertex Shader</string>
+   </property>
+  </action>
+  <action name="saveSession">
+   <property name="text">
+    <string>Save Session</string>
+   </property>
+  </action>
+  <action name="loadSession">
+   <property name="text">
+    <string>Load Session</string>
+   </property>
+  </action>
+  <action name="buildConnectivity">
+   <property name="text">
+    <string>Build Connectivity Array</string>
+   </property>
+  </action>
+  <action name="shaderCookbook">
+   <property name="text">
+    <string>Shader Cookbook</string>
+   </property>
+  </action>
+  <action name="GetGlError">
+   <property name="text">
+    <string>GET GL ERROR</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+D</string>
+   </property>
+  </action>
+  <action name="clearDebug">
+   <property name="text">
+    <string>CLEAR DEBUG</string>
+   </property>
+  </action>
+  <action name="dispatchCompute">
+   <property name="text">
+    <string>RUN DISPATCH</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+X</string>
+   </property>
+  </action>
+  <action name="shaderWatch">
+   <property name="text">
+    <string>GET SHADER WATCH</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="readMe">
+   <property name="text">
+    <string>UI Overview</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLView</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">glview.h</header>
+   <slots>
+    <signal>txStatusMessage(QString)</signal>
+    <signal>txShaderProgramReady()</signal>
+    <signal>txDebugMessage(QString)</signal>
+    <signal>txSavedSelectionsOnLoad(QString)</signal>
+    <slot>rxFragShaderString(QString)</slot>
+    <slot>rxVertShaderString(QString)</slot>
+    <slot>rxUpdateParams()</slot>
+    <slot>rxSaveSelection(QString)</slot>
+    <slot>rxLoadSelection(QString)</slot>
+    <slot>rxParam0Val(double)</slot>
+    <slot>rxParam1Val(double)</slot>
+    <slot>rxParam2Val(double)</slot>
+    <slot>rxParam3Val(double)</slot>
+    <slot>rxParam4Val(double)</slot>
+    <slot>rxParam5Val(double)</slot>
+    <slot>rxParam6Val(double)</slot>
+    <slot>rxNewSession(QString)</slot>
+    <slot>rxCompShaderString(QString)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txNewSession(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxNewSession(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txFragShaderString(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxFragShaderString(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openGLWidget</sender>
+   <signal>txShaderProgramReady()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rxShaderProgramReady()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txVertShaderString(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxVertShaderString(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updateFragButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onPressUpdateFragShader()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1010</x>
+     <y>531</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updateVertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onPressUpdateVertShader()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1010</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openGLWidget</sender>
+   <signal>txStatusMessage(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rxStatusMessage(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updateParameters</sender>
+   <signal>clicked()</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxUpdateParams()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>558</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openGLWidget</sender>
+   <signal>txDebugMessage(QString)</signal>
+   <receiver>debugTextEdit</receiver>
+   <slot>appendPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>558</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>637</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txSaveSelection(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxSaveSelection(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txLoadSelection(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxLoadSelection(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p0val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam0Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p1val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam1Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p2val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam2Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>373</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p3val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam3Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>435</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p4val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam4Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p5val</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxParam5Val(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>559</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openGLWidget</sender>
+   <signal>txSavedSelectionsOnLoad(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rxSavedSelectionsOnLoad(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>txCompShaderString(QString)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>rxCompShaderString(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updateCompButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onPressUpdateCompShader()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>808</x>
+     <y>542</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>txFragShaderString(QString)</signal>
+  <signal>txVertShaderString(QString)</signal>
+  <signal>txSaveSelection(QString)</signal>
+  <signal>txLoadSelection(QString)</signal>
+  <signal>txNewSession(QString)</signal>
+  <signal>txCompShaderString(QString)</signal>
+  <slot>rxStatusMessage(QString)</slot>
+  <slot>onPressUpdateFragShader()</slot>
+  <slot>onPressUpdateVertShader()</slot>
+  <slot>rxShaderProgramReady()</slot>
+  <slot>rxSavedSelectionsOnLoad(QString)</slot>
+  <slot>onPressUpdateCompShader()</slot>
+ </slots>
+</ui>

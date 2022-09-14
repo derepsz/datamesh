@@ -1,0 +1,39 @@
+\hypertarget{camera_8h_source}{}\doxysection{camera.\+h}
+\label{camera_8h_source}\index{D:/uw/research/drcr/src/core/camera.h@{D:/uw/research/drcr/src/core/camera.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CAMERA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CAMERA\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMatrix4x4>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_camera}{Camera}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8    \textcolor{keyword}{public}:}
+\DoxyCodeLine{9       \mbox{\hyperlink{class_camera}{Camera}}();}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11       QMatrix4x4 view\_matrix;}
+\DoxyCodeLine{12       QMatrix4x4 projection\_matrix;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14       \textcolor{keywordtype}{void} rotate(\textcolor{keywordtype}{float} dx, \textcolor{keywordtype}{float} dy);}
+\DoxyCodeLine{15       \textcolor{keywordtype}{void} translate(\textcolor{keywordtype}{float} dx, \textcolor{keywordtype}{float} dy);}
+\DoxyCodeLine{16       \textcolor{keywordtype}{void} setAspectRatio(\textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h);}
+\DoxyCodeLine{17       \textcolor{keywordtype}{void} setRadius(\textcolor{keywordtype}{int} scroll);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19    \textcolor{keyword}{private}:}
+\DoxyCodeLine{20       \textcolor{keywordtype}{void} updateArcBall();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22       QVector3D position;}
+\DoxyCodeLine{23       QVector3D lookat\_target;}
+\DoxyCodeLine{24       QVector3D up\_vector;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26       \textcolor{keywordtype}{float} radius;}
+\DoxyCodeLine{27       \textcolor{keywordtype}{float} azimuth\_rad;}
+\DoxyCodeLine{28       \textcolor{keywordtype}{float} polar\_rad;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30       QMatrix4x4 translation\_matrix;}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CAMERA\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\hypertarget{axes_8h_source}{}\doxysection{axes.\+h}
+\label{axes_8h_source}\index{D:/uw/research/drcr/src/core/axes.h@{D:/uw/research/drcr/src/core/axes.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef AXES\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define AXES\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QOpenGLFunctions>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QOpenGLVertexArrayObject>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QOpenGLBuffer>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QOpenGLShaderProgram>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QOpenGLContext>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QMatrix4x4>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classaxes}{axes}} : \textcolor{keyword}{public} QObject, \textcolor{keyword}{protected} QOpenGLFunctions}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16       Q\_OBJECT}
+\DoxyCodeLine{17    \textcolor{keyword}{public}:}
+\DoxyCodeLine{18       \textcolor{keyword}{explicit} \mbox{\hyperlink{classaxes}{axes}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{19       \mbox{\hyperlink{classaxes}{\string~axes}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21       \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{22       \textcolor{keywordtype}{void} draw();}
+\DoxyCodeLine{23       \textcolor{keywordtype}{void} rotate(\textcolor{keywordtype}{float} dx, \textcolor{keywordtype}{float} dy);}
+\DoxyCodeLine{24       QMatrix4x4 getTransform();}
+\DoxyCodeLine{25       QMatrix4x4 rotation\_matrix;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28       QOpenGLShaderProgram shader;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30    signals:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32    \textcolor{keyword}{private}:}
+\DoxyCodeLine{33       QOpenGLVertexArrayObject vao;}
+\DoxyCodeLine{34       QOpenGLBuffer vbo;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36       \textcolor{keyword}{static} \textcolor{keyword}{constexpr} GLfloat vert\_pos\_cols[] = \{}
+\DoxyCodeLine{37          0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{38          1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{39          0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f,}
+\DoxyCodeLine{40          0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,}
+\DoxyCodeLine{41          0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f,}
+\DoxyCodeLine{42          0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f}
+\DoxyCodeLine{43       \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// AXES\_H}}
+
+\end{DoxyCode}

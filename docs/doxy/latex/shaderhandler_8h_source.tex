@@ -1,0 +1,46 @@
+\hypertarget{shaderhandler_8h_source}{}\doxysection{shaderhandler.\+h}
+\label{shaderhandler_8h_source}\index{D:/uw/research/drcr/src/core/shaderhandler.h@{D:/uw/research/drcr/src/core/shaderhandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SHADERHANDLER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SHADERHANDLER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QOpenGLFunctions>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QOpenGLShaderProgram>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_shader_handler}{ShaderHandler}} : \textcolor{keyword}{public} QObject, \textcolor{keyword}{protected} QOpenGLFunctions}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11       Q\_OBJECT}
+\DoxyCodeLine{12    \textcolor{keyword}{public}:}
+\DoxyCodeLine{13       \textcolor{keyword}{explicit} \mbox{\hyperlink{class_shader_handler}{ShaderHandler}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15       \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{16       \textcolor{keywordtype}{void} initSelectShader();}
+\DoxyCodeLine{17       \textcolor{keywordtype}{void} useRender();}
+\DoxyCodeLine{18       \textcolor{keywordtype}{void} useSelect();}
+\DoxyCodeLine{19 \textcolor{comment}{//      void swap(QString);}}
+\DoxyCodeLine{20       \textcolor{keywordtype}{void} setFragShader(QString);}
+\DoxyCodeLine{21       \textcolor{keywordtype}{void} setVertShader(QString);}
+\DoxyCodeLine{22       QString getLog();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24       QOpenGLShaderProgram shader;}
+\DoxyCodeLine{25       QOpenGLShaderProgram selectShader;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27    signals:}
+\DoxyCodeLine{28       \textcolor{keywordtype}{void} txShaderLog(QString);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30    \textcolor{keyword}{private}:}
+\DoxyCodeLine{31       \textcolor{keywordtype}{void} reloadShaders();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34       QString m\_vertShader;}
+\DoxyCodeLine{35       QString m\_fragShader;}
+\DoxyCodeLine{36       QString m\_shaderLog;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SHADERHANDLER\_H}}
+
+\end{DoxyCode}

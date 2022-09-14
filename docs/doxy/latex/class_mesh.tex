@@ -1,0 +1,53 @@
+\hypertarget{class_mesh}{}\doxysection{Mesh Class Reference}
+\label{class_mesh}\index{Mesh@{Mesh}}
+Inheritance diagram for Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mesh}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mesh_a339f2160c7610b1106c0fd5e9c033788}\label{class_mesh_a339f2160c7610b1106c0fd5e9c033788}} 
+void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_mesh_a4e4db122d7380cde651abe752f9ef550}\label{class_mesh_a4e4db122d7380cde651abe752f9ef550}} 
+bool {\bfseries load\+Mesh} (QString file\+\_\+path)
+\item 
+\mbox{\Hypertarget{class_mesh_a806fb1401b5701bb1d33bc63cadebb53}\label{class_mesh_a806fb1401b5701bb1d33bc63cadebb53}} 
+void {\bfseries init\+Buffers} (QOpen\+GLShader\+Program \&shader)
+\item 
+\mbox{\Hypertarget{class_mesh_a33c6ee530749c59e6309201e6abca98a}\label{class_mesh_a33c6ee530749c59e6309201e6abca98a}} 
+void {\bfseries draw} (QOpen\+GLShader\+Program \&shader)
+\item 
+\mbox{\Hypertarget{class_mesh_a9a4f0ad1059aaf0399da0e8ceba9d851}\label{class_mesh_a9a4f0ad1059aaf0399da0e8ceba9d851}} 
+void {\bfseries init\+Quad} (QOpen\+GLShader\+Program \&shader)
+\item 
+\mbox{\Hypertarget{class_mesh_a0c5ba056a70c256921bc8a2082db87ff}\label{class_mesh_a0c5ba056a70c256921bc8a2082db87ff}} 
+bool {\bfseries has\+Mesh} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mesh_a4665df331884916172fb02599ce2231b}\label{class_mesh_a4665df331884916172fb02599ce2231b}} 
+QVector$<$ \mbox{\hyperlink{structvec3}{vec3}} $>$ {\bfseries verts}
+\item 
+\mbox{\Hypertarget{class_mesh_a7c0dc7e04d226dd88bb17e0f7c3ff2db}\label{class_mesh_a7c0dc7e04d226dd88bb17e0f7c3ff2db}} 
+QVector$<$ \mbox{\hyperlink{structvec3}{vec3}} $>$ {\bfseries norms}
+\item 
+\mbox{\Hypertarget{class_mesh_a2c745e41a25bc6b394c09a325d509703}\label{class_mesh_a2c745e41a25bc6b394c09a325d509703}} 
+QVector$<$ \mbox{\hyperlink{structvec2}{vec2}} $>$ {\bfseries texcoords}
+\item 
+\mbox{\Hypertarget{class_mesh_a88723ead76d6169c03534180cfbe223a}\label{class_mesh_a88723ead76d6169c03534180cfbe223a}} 
+QVector$<$ GLuint $>$ {\bfseries idxs}
+\item 
+\mbox{\Hypertarget{class_mesh_a72a266c63a70b74adc1045fe3c74dc8a}\label{class_mesh_a72a266c63a70b74adc1045fe3c74dc8a}} 
+QMatrix4x4 {\bfseries model\+\_\+matrix}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/uw/research/drcr/src/core/mesh.\+h\item 
+D\+:/uw/research/drcr/src/core/mesh.\+cc\end{DoxyCompactItemize}

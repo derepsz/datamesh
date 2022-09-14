@@ -1,0 +1,54 @@
+\hypertarget{mesh_8h_source}{}\doxysection{mesh.\+h}
+\label{mesh_8h_source}\index{D:/uw/research/drcr/src/core/mesh.h@{D:/uw/research/drcr/src/core/mesh.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MESH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MESH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QOpenGLFunctions>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QOpenGLVertexArrayObject>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QOpenGLBuffer>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QOpenGLShaderProgram>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}datatypes.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_mesh}{Mesh}} : \textcolor{keyword}{protected} QOpenGLFunctions}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15    \textcolor{keyword}{public}:}
+\DoxyCodeLine{16       \mbox{\hyperlink{class_mesh}{Mesh}}();}
+\DoxyCodeLine{17       \textcolor{keywordtype}{void} destroy();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19       \textcolor{keywordtype}{bool} loadMesh(QString file\_path);}
+\DoxyCodeLine{20       \textcolor{keywordtype}{void} initBuffers(QOpenGLShaderProgram\& shader);}
+\DoxyCodeLine{21       \textcolor{keywordtype}{void} draw(QOpenGLShaderProgram\& shader);}
+\DoxyCodeLine{22       \textcolor{keywordtype}{void} initQuad(QOpenGLShaderProgram\& shader);}
+\DoxyCodeLine{23       \textcolor{keywordtype}{bool} hasMesh();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26       QVector<vec3>          verts;}
+\DoxyCodeLine{27       QVector<vec3>          norms;}
+\DoxyCodeLine{28       QVector<vec2>          texcoords;}
+\DoxyCodeLine{29       QVector<GLuint>   idxs;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32       QMatrix4x4 model\_matrix;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34    \textcolor{keyword}{private}:}
+\DoxyCodeLine{35       QOpenGLVertexArrayObject  vao;}
+\DoxyCodeLine{36       QOpenGLBuffer             vbo\_pos;}
+\DoxyCodeLine{37       QOpenGLBuffer             vbo\_norm;}
+\DoxyCodeLine{38       QOpenGLBuffer             ebo;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40       \textcolor{keywordtype}{bool} has\_texcoords;}
+\DoxyCodeLine{41       \textcolor{keywordtype}{bool} has\_norms;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MESH\_H}}
+
+\end{DoxyCode}

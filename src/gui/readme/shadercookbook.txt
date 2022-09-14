@@ -1,0 +1,136 @@
+========================================
+Glossary / Abbreviations / Acronyms
+========================================
+FID - Facet ID
+ADJ - adjacent, refers to neighboring facets
+
+
+===============================
+# MESH ATTRIBUTE BINDING
+===============================
+                                     // object in Mesh class:
+layout (location = 0) in vec3 aPos;  // vbo_pos
+layout (location = 1) in vec3 aNorm; // vbo_norm
+layout (location = 2) in vec2 aUv;   // vbo_uv
+
+===============================
+# UNIFORMS : RENDER SHADER PROGRAM
+===============================
+// Uniforms are common between frag / vert shaders
+// Not shared with Compute Shader Program
+
+// Model-View-Project Matrix
+uniform mat4 mvp;
+
+// FID of individual selection
+uniform int selectedID;
+
+// host-side bool - use as use as int 0/1
+// true if current selection is one facet
+uniform int soloSelected;
+
+
+===============================
+# UNIFORMS : COMPUTE SHADER PROGRAM
+===============================
+// Compute uniforms must have location specified by CPU
+// and are not common with vert / frag shaders
+
+// Milliseconds since 00:00 from host
+layout(location = 1) uniform int time;
+
+
+===============================
+# PARAMETER SSBOs
+===============================
+
+// Each PARAM# in the UI maps to one of six unique SSBOs
+// Binding numbers match location in UI, names are arbitrary
+// Each contains one array of size NUM_FACETS
+
+layout(std430, binding = 0) buffer PARAM0 {
+   float val[]; } param0;
+
+// ...
+
+layout(std430, binding = 5) buffer PARAM5 {
+   float val[]; } param5;
+
+
+===============================
+# CONNECTIVITY LIST
+===============================
+
+// If available, this SSBO will hold the connectivity
+// information for the active mesh. The array is indexed
+// by Facet ID and holds the FIDs of up to 3 adjacent
+// facets, where a complete edge (two vertices) is
+// required to be considered adjacent.
+
+layout(std430, binding = 6) buffer ADJ {
+   int id[][NUM_ADJACENT]; } adj;
+
+// DEMO: Highlight facets adjacent to selected.
+for (int i = 0; i < NUM_ADJACENT; ++i) {
+   int adj_id = adj.id[selectedID][i];
+   if (gl_PrimitiveID == int(adj_id)) {
+      fragColor = vec4(0.3, 0.4, 0.4, 1.0);
+   }
+
+
+===============================
+# SHADER WATCH
+===============================
+
+#define NUM_WATCHES 8
+
+// This SSBO interfaces with host-side ShaderWatcher class
+// to provide on-demand feedback from shaders. Must be
+// mindful of GPU buffer block alignment if changed.
+
+struct ShaderWatch {
+   int   ints   [NUM_WATCHES];
+   float floats [NUM_WATCHES];
+   vec4  vec4s  [NUM_WATCHES];
+};
+
+layout(std430, binding = 7) buffer DEBUG {
+   ShaderWatch watch; } debug;
+
+// DEMO: Print FIDs for adjacent facets, a float attributed
+// to FID in some parameter, and dummy vec4 values.
+for (int i = 0; i < NUM_ADJACENT; ++i) {
+   int adj_id = adj.id[selectedID][i];
+   debug.watch.ints[i]   = adj_id;
+   debug.watch.floats[i] = param0.val[adj_id];
+   debug.watch.vec4s[i]  = vec4(0.1, 0.2, 0.3, float(adj_id));
+}
+
+
+===============================
+# COMPUTE SHADER
+===============================
+// All SSBOs are shared between render and compute shader programs.
+// ie changes made by compute can be visualized realtime in render.
+
+// Group size hard-coded at 8. Must match dispatch call from CPU.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 8) in;
+
+
+===============================
+# MISC SNIPPETS
+===============================
+
+vec4 color = {
+   fUv.x,
+   fUv.y,
+   clamp(0, sin(time/MS_IN_DAY*100000), 1),
+   1.0f
+};
+
+vec4 color = {
+   param0.val[gl_PrimitiveID],
+   param1.val[gl_PrimitiveID],
+   param2.val[gl_PrimitiveID],
+   1.0f
+};
