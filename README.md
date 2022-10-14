@@ -6,28 +6,21 @@
 ## Features / Implementation : Summer 2022
 ---
 
-### Rendering
-- [ ] Hot-swap draw shader
-- [ ] Deferred rendering
-- [ ] Post-processing
-  - [ ] Blur (Depth of field)
-  - [ ] Emission / Glow
-
 ### Data management
 
-- [ ] Save session (mesh & metadata)
+- [x] Save session (mesh & metadata)
 - [ ] Load / render multiple meshes
 
 ### Interactivity (3D)
 
-- [ ] 3D selection
-  - [ ] Add / remove from selection
-- [ ] Camera control
-  - [ ] Trackball / orbit
+- [x] 3D selection
+  - [x] Add / remove from selection
+- [x] Camera control
+  - [x] Trackball / orbit
 
 ### Interactivity (GUI)
 
-- [ ] Shader Editor
+- [x] Shader Editor
 - [ ] Mesh list
 - [ ] Lights
   - [ ] List
@@ -36,24 +29,26 @@
 
 ### Feedback (GUI)
 
-- [ ] QPainter Overlay
-  - [ ] Box Select
-  - [ ] ???
-- [ ] Status bar
+- [x] Viewport
+  - [x] Box Select
+  - [x] Highlight Selected (Wireframe)
+  - [ ] Coordinate Axes
+- [x] Status bar
   - [ ] Selected metadata val (avg)
   - [ ] Tool information
 
-### GPU / OpenGL
-
-- [ ] Coordinate Axes
-- [ ] Highlight Selected (Wireframe)
+### Rendering
+- [x] Hot-swap draw shader
+- [ ] Deferred rendering
+- [ ] Post-processing
+  - [ ] Blur (Depth of field)
+  - [ ] Emission / Glow
 
 ### Backend / Solver
-- [ ] GPU Compute
+- [x] GPU Compute
 - [ ] Multithreaded computation
-- [ ] Neighboring facet tracking
+- [x] Neighboring facet tracking
 - [ ] Generate heatmap using FEM
-- [ ] TrueView integration (realtime)
 - [ ] ML (Python) linking
 
 
