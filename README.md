@@ -1,6 +1,6 @@
-# SciVis GUI
+# GLSL DataMesh
 
-![System Architecture](docs/sys_diag.png)
+![GUI](docs/datamesh_port.jpg)
 
 ---
 ## Features / Implementation : Summer 2022
@@ -22,7 +22,7 @@
 
 - [ ] 3D selection
   - [ ] Add / remove from selection
-- [ ] Camera control 
+- [ ] Camera control
   - [ ] Trackball / orbit
 
 ### Interactivity (GUI)
@@ -42,7 +42,7 @@
 - [ ] Status bar
   - [ ] Selected metadata val (avg)
   - [ ] Tool information
-  
+
 ### GPU / OpenGL
 
 - [ ] Coordinate Axes
@@ -69,8 +69,8 @@
 
 - [x] 3D selection
   - [x] Individual
-  - [x] Group (Box) 
-- [x] Camera control 
+  - [x] Group (Box)
+- [x] Camera control
   - [x] Free Rotation
   - [x] Pan
 
